@@ -1,0 +1,10 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="36" viewBox="0 0 160 36">
+  <defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#14b8a6"/></linearGradient></defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="3" stroke-linecap="round">
+    <path d="M12 28 C8 24, 8 12, 16 10 C18 9, 22 10, 24 14 C26 18, 24 24, 20 28"/>
+    <path d="M28 28 C24 24, 24 12, 32 10 C34 9, 38 10, 40 14 C42 18, 40 24, 36 28"/>
+  </g>
+  <text x="50" y="25" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="url(#grad)">SheCare</text>
+</svg>

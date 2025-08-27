@@ -1,0 +1,1 @@
+<?php require __DIR__ . '/config.php'; respond(['ok'=>true, 'ts'=>time()]); ?>

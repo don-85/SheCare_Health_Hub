@@ -1,31 +1,7 @@
-/* Non-critical styles (critical nav/hero inline in <head>) */
-.card-hover:hover {
-    transform: translateY(-3px);
-    transition: transform .2s ease;
-}
 
-.kpis .kpi {
-    border-radius: 1rem;
-    background: #f8fafc;
-    padding: 1rem;
-}
-
-.badge-soft {
-    background: #eef2ff;
-    color: #3730a3;
-    border: 1px solid #e0e7ff;
-}
-
-.table-clean thead th {
-    background: #f1f5f9;
-}
-
-.input-ghost {
-    background: #f8fafc;
-    border: 1px solid #e5e7eb;
-}
-
-.input-ghost:focus {
-    border-color: #a78bfa;
-    box-shadow: 0 0 0 .25rem rgba(167, 139, 250, .25);
-}
+.card-hover:hover { transform: translateY(-3px); transition: transform .2s ease; }
+.kpis .kpi { border-radius: 1rem; background: #f8fafc; padding: 1rem; }
+.badge-soft { background: #eef2ff; color: #3730a3; border: 1px solid #e0e7ff; }
+.table-clean thead th { background: #f1f5f9; }
+.input-ghost { background:#f8fafc; border:1px solid #e5e7eb; }
+.input-ghost:focus { border-color:#0ea5e9; box-shadow: 0 0 0 .25rem rgba(14,165,233,.25); }

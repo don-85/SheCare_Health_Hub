@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Post • SheCare Health Hub</title>
-  <meta name="description"
-    content="SheCare Health Hub — fast, responsive, no-WordPress informational site with blog, dashboards, and seamless navigation." />
+  <meta name="description" content="SheCare Health Hub — fast, responsive, no-WordPress informational site with blog, dashboards, and seamless navigation." />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,291 +13,174 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet">
   <style>
-    :root {
-      --brand: #6c5ce7;
-      --brand2: #00cec9;
-      --ink: #111;
-      --muted: #6b7280;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color: var(--ink);
-    }
-
-    /* Inline-critical nav styling */
-    .navbar-dark .navbar-nav .nav-link {
-      color: #fff !important;
-      font-weight: 600;
-    }
-
-    .navbar-dark .navbar-brand {
-      color: #fff;
-      font-weight: 700;
-      letter-spacing: .3px;
-    }
-
-    .btn-brand {
-      background: var(--brand);
-      color: #fff;
-      border: none;
-    }
-
-    .btn-brand:hover {
-      filter: brightness(1.1);
-    }
-
-    .btn-outline-brand {
-      border-color: var(--brand);
-      color: var(--brand);
-    }
-
-    .btn-outline-brand:hover {
-      background: var(--brand);
-      color: #fff;
-    }
-
-    .hero {
-      position: relative;
-      min-height: 68vh;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-
+    :root { --brand:#0ea5e9; --brand2:#14b8a6; --ink:#111; --muted:#6b7280; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color:var(--ink); }
+    .navbar-dark .navbar-nav .nav-link { color:#fff !important; font-weight:600; }
+    .navbar-dark .navbar-brand { color:#fff; font-weight:700; letter-spacing:.3px; }
+    .btn-brand { background:var(--brand); color:#fff; border:none; }
+    .btn-brand:hover { filter:brightness(1.1); }
+    .btn-outline-brand { border-color:var(--brand); color:var(--brand); }
+    .btn-outline-brand:hover { background:var(--brand); color:#fff; }
+    .hero { position:relative; min-height:68vh; display:grid; place-items:center; overflow:hidden; }
     .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(1000px 600px at -10% -20%, rgba(108, 92, 231, .25), transparent 60%),
-        radial-gradient(900px 600px at 110% 10%, rgba(0, 206, 201, .25), transparent 60%),
-        linear-gradient(180deg, #0f1220 0%, #171a2a 100%);
-      z-index: 0;
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(1000px 600px at -10% -20%, rgba(108,92,231,.25), transparent 60%),
+                  radial-gradient(900px 600px at 110% 10%, rgba(0,206,201,.25), transparent 60%),
+                  linear-gradient(180deg, #0f1220 0%, #171a2a 100%);
+      z-index:0;
     }
-
-    .hero .content {
-      position: relative;
-      z-index: 1;
-      color: #fff;
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-
-    .hero h1 {
-      font-weight: 800;
-      line-height: 1.05;
-    }
-
-    .hero p.lead {
-      color: #e5e7eb;
-      max-width: 760px;
-      margin: auto;
-    }
-
-    .glass {
-      background: rgba(255, 255, 255, .06);
-      border: 1px solid rgba(255, 255, 255, .12);
-      backdrop-filter: blur(10px);
-    }
-
-    .card-rounded {
-      border-radius: 1.25rem;
-    }
-
-    .shadow-soft {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
-    }
-
-    .section {
-      padding: 4rem 0;
-    }
-
-    .feature i {
-      font-size: 1.8rem;
-    }
-
-    .like-btn,
-    .dislike-btn {
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .footer {
-      background: #0e0f17;
-      color: #cbd5e1;
-    }
-
-    .footer a {
-      color: #cbd5e1;
-      text-decoration: none;
-      opacity: .9;
-    }
-
-    .footer a:hover {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: .25rem .5rem;
-      border: 1px solid #e5e7eb;
-      border-radius: 999px;
-      font-size: .8rem;
-      margin-right: .25rem;
-      color: #374151;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 575.98px) {
-      .hero h1 {
-        font-size: 1.9rem;
-      }
-    }
+    .hero .content { position:relative; z-index:1; color:#fff; text-align:center; padding:4rem 1rem; }
+    .hero h1 { font-weight:800; line-height:1.05; }
+    .hero p.lead { color:#e5e7eb; max-width:760px; margin:auto; }
+    .glass { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); backdrop-filter: blur(10px); }
+    .card-rounded { border-radius:1.25rem; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    .section { padding: 4rem 0; }
+    .feature i { font-size:1.8rem; }
+    .like-btn, .dislike-btn { cursor:pointer; user-select:none; }
+    .footer { background:#0e0f17; color:#cbd5e1; }
+    .footer a { color:#cbd5e1; text-decoration:none; opacity:.9; }
+    .footer a:hover { opacity:1; text-decoration:underline; }
+    .tag { display:inline-block; padding:.25rem .5rem; border:1px solid #e5e7eb; border-radius:999px; font-size:.8rem; margin-right:.25rem; color:#374151; }
+    @media (max-width: 575.98px) { .hero h1 { font-size: 1.9rem; } }
   </style>
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark"
-    style="background: linear-gradient(90deg, var(--brand) 0%, #3b82f6 100%);">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><i class="bi bi-heart-pulse-fill me-2"></i>SheCare</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="pills.html">Medication</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item ms-lg-3">
-            <a href="dashboard.html" class="btn btn-light btn-sm rounded-pill px-3 me-2" style="font-weight:700;"><i
-                class="bi bi-person-circle me-1"></i>User</a>
-          </li>
-          <li class="nav-item">
-            <a href="admin.html" class="btn btn-dark btn-sm rounded-pill px-3" style="font-weight:700;"><i
-                class="bi bi-shield-lock me-1"></i>Admin</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(90deg, var(--brand) 0%, var(--brand2) 100%);">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/img/logo.svg" alt="SheCare logo" style="height:28px" class="me-2">
+      <span>SheCare</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="pills.html">Medication</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="dashboard.html" class="btn btn-light btn-sm rounded-pill px-3 me-2" style="font-weight:700;"><i class="bi bi-person-circle me-1"></i>User</a>
+        </li>
+        <li class="nav-item">
+          <a href="admin.html" class="btn btn-dark btn-sm rounded-pill px-3" style="font-weight:700;"><i class="bi bi-shield-lock me-1"></i>Admin</a>
+        </li>
+        <li class="nav-item ms-lg-2">
+          <a href="#" id="waNav" class="btn btn-success btn-sm rounded-pill px-3" style="font-weight:700;"><i class="bi bi-whatsapp me-1"></i>WhatsApp</a>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <main class="container section">
-    <div class="row g-4">
-      <div class="col-lg-8">
-        <article class="card card-rounded shadow-soft">
-          <div class="card-body">
-            <h1 id="postTitle" class="h3"></h1>
-            <div class="mb-3" id="postTags"></div>
-            <div id="postBody"></div>
-            <div class="d-flex align-items-center gap-3 mt-3">
-              <span class="like-btn" data-like-btn onclick=""><i class="bi bi-hand-thumbs-up"></i> <span
-                  data-like-count="">0</span></span>
-              <span class="dislike-btn" data-dislike-btn onclick=""><i class="bi bi-hand-thumbs-down"></i> <span
-                  data-dislike-count="">0</span></span>
-            </div>
+<main class="container section">
+  <div class="row g-4">
+    <div class="col-lg-8">
+      <article class="card card-rounded shadow-soft">
+        <div class="card-body">
+          <h1 id="postTitle" class="h3"></h1>
+          <div class="mb-3" id="postTags"></div>
+          <div id="postBody"></div>
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <span class="like-btn" data-like-btn onclick=""><i class="bi bi-hand-thumbs-up"></i> <span data-like-count="">0</span></span>
+            <span class="dislike-btn" data-dislike-btn onclick=""><i class="bi bi-hand-thumbs-down"></i> <span data-dislike-count="">0</span></span>
           </div>
-        </article>
-
-        <section class="mt-4">
-          <h5 class="mb-3">Comments</h5>
-          <div class="card card-rounded shadow-soft mb-3">
-            <div class="card-body">
-              <div class="row g-2">
-                <div class="col-md-4"><input id="cName" class="form-control input-ghost"
-                    placeholder="Your name (optional)" /></div>
-                <div class="col-md-8"><textarea id="cText" class="form-control input-ghost" rows="2"
-                    placeholder="Write your comment..."></textarea></div>
-                <div class="col-12 text-end">
-                  <button class="btn btn-brand rounded-pill" data-comment-btn onclick="">Post Comment</button>
-                </div>
+        </div>
+      </article>
+      <section class="mt-4">
+        <h5 class="mb-3">Comments</h5>
+        <div class="card card-rounded shadow-soft mb-3">
+          <div class="card-body">
+            <div class="row g-2">
+              <div class="col-md-4"><input id="cName" class="form-control input-ghost" placeholder="Your name (optional)" /></div>
+              <div class="col-md-8"><textarea id="cText" class="form-control input-ghost" rows="2" placeholder="Write your comment..."></textarea></div>
+              <div class="col-12 text-end">
+                <button class="btn btn-brand rounded-pill" data-comment-btn onclick="">Post Comment</button>
               </div>
             </div>
           </div>
-          <div id="commentsWrap"></div>
-        </section>
-      </div>
-      <div class="col-lg-4">
-        <div class="card card-rounded shadow-soft">
-          <div class="card-body">
-            <h6>Disclaimer</h6>
-            <p class="small text-muted mb-0">Content is educational and not medical advice. Consult licensed clinicians
-              for personalized care.</p>
-          </div>
+        </div>
+        <div id="commentsWrap"></div>
+      </section>
+    </div>
+    <div class="col-lg-4">
+      <div class="card card-rounded shadow-soft">
+        <div class="card-body">
+          <h6>Disclaimer</h6>
+          <p class="small text-muted mb-0">Content is educational and not medical advice.</p>
         </div>
       </div>
     </div>
-  </main>
-  <script>document.addEventListener('DOMContentLoaded', loadPostFromQuery);</script>
-  <footer class="footer mt-5">
-    <div class="container py-5">
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <h5 class="mb-3">SheCare Health Hub</h5>
-          <p class="small">Fast, secure, privacy-first health information hub. No WordPress. Built with HTML/CSS/JS +
-            Bootstrap. This site is for information only and not a substitute for professional medical advice.</p>
-          <div class="d-flex gap-3">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-whatsapp"></i></a>
-            <a href="#"><i class="bi bi-telegram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-        <div class="col-6 col-md-2">
-          <h6>Explore</h6>
-          <ul class="list-unstyled small">
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="pills.html">Medication</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="faq.html">FAQs</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-2">
-          <h6>Resources</h6>
-          <ul class="list-unstyled small">
-            <li><a href="legal.html">Legal & Safety</a></li>
-            <li><a href="#">Care Guides</a></li>
-            <li><a href="#">Telehealth</a></li>
-            <li><a href="#">Clinics</a></li>
-            <li><a href="#">Emergency</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-2">
-          <h6>Company</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Partners</a></li>
-            <li><a href="terms.html">Terms of Use</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="#">Cookie Policy</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-2">
-          <h6>Help</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#">Support Center</a></li>
-            <li><a href="#">Report Issue</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Status</a></li>
-          </ul>
+  </div>
+</main>
+<script>document.addEventListener('DOMContentLoaded', loadPostFromQuery);</script>
+<footer class="footer mt-5">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-12 col-md-4">
+        <h5 class="mb-3">SheCare Health Hub</h5>
+        <p class="small">Fast, secure, privacy-first health information hub. Built with HTML/CSS/JS + Bootstrap. No WordPress.</p>
+        <div class="d-flex gap-3">
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-telegram"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
-      <hr class="border-secondary my-4" />
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
-        <div>&copy; {datetime.datetime.now().year} SheCare Health Hub. All rights reserved.</div>
-        <div>Built with <span class="text-danger">❤</span> for speed • v1.0</div>
+      <div class="col-6 col-md-2">
+        <h6>Explore</h6>
+        <ul class="list-unstyled small">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="pills.html">Medication</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6>Resources</h6>
+        <ul class="list-unstyled small">
+          <li><a href="legal.html">Legal & Safety</a></li>
+          <li><a href="#">Care Guides</a></li>
+          <li><a href="#">Telehealth</a></li>
+          <li><a href="#">Clinics</a></li>
+          <li><a href="#">Emergency</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6>Company</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-2">
+        <h6>Help</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">Report Issue</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Status</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/app.js"></script>
+    <hr class="border-secondary my-4" />
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small">
+      <div>&copy; 2025 SheCare Health Hub. All rights reserved.</div>
+      <div>Built for speed • v1.0</div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/router.js"></script>
 </body>
-
 </html>
