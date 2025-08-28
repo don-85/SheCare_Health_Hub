@@ -5,7 +5,7 @@
     brand: '#0ea5e9',
     brand2: '#14b8a6',
     whatsapp: {
-      number: '+971500000000',
+      number: '447463010235',
       message: 'Hello SheCare, I would like to chat.'
     },
     apiBase: '/api'
